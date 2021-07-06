@@ -1,26 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="entirething">
+        <div class="togglebtn">
 
+            <h2> calc </h2>
+            <div class="themebox">
+                <h3>THEME</h3>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+                <div>
+                    <div class="themes labeldesign">
+                        <label for="onetheme" onclick="">1</label>
+                        <label for="twotheme" class="disabled" onclick="">2</label>
+                        <label for="threetheme" onclick="">3</label>
+                    </div>
+
+                    <div class="themes toggledesign toggle-radio">
+                        <input class="toggleinput" id="themeToggle" type="range" min="1" max="3" value="1">
+                    </div>
+                </div>
+
+                <a></a>
+
+            </div>
+        </div>
+
+        <div class="table">
+            <div>
+                <div class="inputbox">
+                    <input class="inputbox" type="text" id="result" />
+                </div>
+            </div>
+
+            <div class="calculator-buttons">
+                <input class="row" id="btnkeys" type="button" value="7" onclick="dis('7')" />
+                <input class="row" id="btnkeys" type="button" value="8" onclick="dis('8')" />
+                <input class="row" id="btnkeys" type="button" value="9" onclick="dis('9')" />
+                <input class="row delbtn" id="btnkeys" type="button" value="DEL" onclick="clr()" />
+
+                <input class="row" id="btnkeys" type="button" value="4" onclick="dis('4')" />
+                <input class="row" id="btnkeys" type="button" value="5" onclick="dis('5')" />
+                <input class="row" id="btnkeys" type="button" value="6" onclick="dis('6')" />
+                <input class="row" id="btnkeys" type="button" value="+" onclick="dis('+')" />
+
+                <input class="row" id="btnkeys" type="button" value="1" onclick="dis('1')" />
+                <input class="row" id="btnkeys" type="button" value="2" onclick="dis('2')" />
+                <input class="row" id="btnkeys" type="button" value="3" onclick="dis('3')" />
+                <input class="row" id="btnkeys" type="button" value="−" onclick="dis('-')" />
+
+                <input class="row" id="btnkeys" type="button" value="." onclick="dis('.')" />
+                <input class="row" id="btnkeys" type="button" value="0" onclick="dis('0')" />
+                <input class="row" id="btnkeys" type="button" value="/" onclick="dis('/')" />
+                <input class="row" id="btnkeys" type="button" value="x" onclick="dis('*')" />
+                <input class="row resetbtn" id="btnkeys" type="button" value="RESET" onclick="dis('%')" />
+                <!-- dis("1") will call function dis to display value -->
+                <input id="btnkeys" class="equalbtn row" type="button" value="=" onclick="solve()" />
+            </div>
+        </div>
+    </div>
+
+    <footer class="attribution">
+        <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Suraiya Kawsar</a></span>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
